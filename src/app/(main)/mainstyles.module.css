@@ -1,0 +1,78 @@
+/**
+* Unique styles that apply to the (main) pages
+*/
+
+/**
+* Navigation Bar
+* 
+*/
+.linkNavAnimation {
+    transition: border 0.5s, background-color 0.2s;
+}
+
+.linkNavAnimation :hover {
+    font-weight: bolder;
+}
+
+/* Link text */
+
+.letterSpaceWide {
+    letter-spacing: 20px;
+}
+
+.headerFont {
+    font-size: 2rem;
+    font-weight: bolder;
+    cursor:default;
+}
+
+/* Main Page Content */
+
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100%;
+    min-width: 500px;
+}
+
+.textStroke {
+    -webkit-text-stroke: 1px #4e758b;
+}
+
+/** 
+* Gallery Page
+*/
+
+.tabBar li {
+    border-radius: 25% 25% 0 0;
+    text-align: center;
+    padding: 10px 15px 10px 20px;
+    text-wrap: nowrap;
+    cursor:pointer;
+    letter-spacing: 0.2rem;
+    transition: font-weight 0.5s, box-shadow 0.5s, margin-right 1s, padding 0.7s, width 0.5s,
+    margin-top 0.05s, color 1s, font-size 0.5s;
+}
+
+.tabBar li:hover {
+    background: #a1d32d;
+    margin-right: 5px;
+    box-shadow: 5px 0px #2fada0;
+    font-weight: bold;
+    padding: 8.5px 15px 10px 20px;
+    width: auto;
+}
+
+.tabBar li:active {
+    color:white;
+    font-size: large;
+    font-weight:bolder;
+    padding: 5px 20px;
+    margin-top: 3.5px;
+    width:auto;
+}
+
+.tabContent {
+
+    box-shadow: 3px 2.5px 2px black;
+}
+
