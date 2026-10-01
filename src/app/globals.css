@@ -4,6 +4,10 @@
     .font-orbitron {
         font-family: var(--font-orbitron);
     }
+
+    .font-lexend {
+        font-family: var(--font-lexend);
+    }
 }
 
 html,
@@ -28,3 +32,4 @@ li {
     text-decoration: none;
     list-style: none;
 }
+
