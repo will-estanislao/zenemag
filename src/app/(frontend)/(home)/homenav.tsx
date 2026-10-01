@@ -12,14 +12,14 @@ export default function Homenav() {
     ];
 
     const showLinks = navLinks.map(link =>
-        <Link className="w-75 md:w-full h-17 mb-5 bg-blue-400 pl-10 md:pl-25 text-2xl font-extrabold uppercase tracking-[.35em] content-center" href={link.href} key={link.name}>
+        <Link className="row-span-1 col-span-1 w-75 md:w-full h-15 mb-5 bg-blue-400 pl-10 md:pl-25 text-2xl font-extrabold uppercase tracking-[.35em] content-center" href={link.href} key={link.name}>
             {link.name}
         </Link>
     );
     
     return (
-        <div className="flex flex-col">
+        <>
             {showLinks}
-        </div>
+        </>
     );
 }

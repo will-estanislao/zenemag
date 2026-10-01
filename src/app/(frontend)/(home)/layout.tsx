@@ -1,19 +1,9 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Orbitron, Lexend_Deca } from "next/font/google";
 import '@/app/globals.css'
+import { orbitron, lexend} from '@/app/styles/fonts'
 
-export const lexend = Lexend_Deca({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-lexend",
-});
-
-export const orbitron = Orbitron({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-orbitron",
-});
+const fonts = [orbitron, lexend];
 
 export const metadata: Metadata = {
   title: "Home page - Zene Magazine",
@@ -24,7 +14,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={ `${orbitron.variable} ${lexend.variable}` }
+      className={`${fonts[0].variable} ${fonts[1].variable}`}
     >
       <body className="font-orbitron">
         <div className='min-h-full flex flex-col'>
@@ -42,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <hr />
         <div className="backdrop-blur-xs">
           <footer className="flex justify-center shrink-0 mt-5 mb-5 text-shadow-lg/50">
-            <p>Zene Magazine &copy; 2026</p>
+            <h3>Zene Magazine &copy; 2026</h3>
           </footer>
           </div>
           </div>
