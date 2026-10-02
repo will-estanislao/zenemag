@@ -1,0 +1,10 @@
+/** Unique styling for the Home Page */
+
+.newsBox {
+    box-shadow: 3px 2.5px 2px black;
+}
+
+/* Navigation Links */
+.textStroke {
+    -webkit-text-stroke: 1px #4e758b;
+}

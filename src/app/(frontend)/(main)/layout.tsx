@@ -16,13 +16,13 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                 <div className="backdrop-blur-xs">
                     <Header />
                 </div>
-                <main className='flex-1 mt-15 mb-15 ml-50 mr-50 pl-20 pr-20'>
+                <main className='flex-1 mt-15 mb-15 pl-20 pr-20'>
                     {children}
                 </main>
                 <hr />
                 <div className="backdrop-blur-xs">
-                    <footer className="flex justify-center shrink-0 mt-5 mb-5 text-shadow-lg/50">
-                        <p>Zene Magazine &copy; 2026</p>
+                    <footer className="flex justify-center mt-5 mb-5 text-shadow-lg/50">
+                        <h3>Zene Magazine &copy; 2026</h3>
                     </footer>
                 </div>
             </body>

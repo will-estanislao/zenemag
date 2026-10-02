@@ -27,13 +27,6 @@
 }
 
 /* Main Page Content */
-
-.main {
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100%;
-    min-width: 500px;
-}
-
 .textStroke {
     -webkit-text-stroke: 1px #4e758b;
 }

@@ -25,6 +25,7 @@ body {
 
 p {
     font-family: var(--font-lexend);
+    cursor:default;
 }
 
 h1, h2, h3 {
