@@ -11,7 +11,7 @@ export default function Homenav() {
         {name: "Store", href:"https://www.etsy.com/ca/shop/ZadehArt", src: "/navicons/white/sprite-store.png", alt: "Store", bg: "bg-linear-to-r from-[#3f8ae4] to-[#42caa6]/60" },
     ];
 
-    const hoverEffects = "hover:h-20 hover:border-2 hover:border-[#560d4a] hover:font-extrabold hover:drop-shadow-xl/75 hover:shadow-[#2fada0]";
+    const hoverEffects = "hover:h-20 hover:inset-ring-2 hover:inset-ring-[#560d4a] hover:font-extrabold hover:drop-shadow-xl/75 hover:shadow-[#2fada0]";
     const transitionEffects = "transition-all delay-150 duration-400 ease-in-out";
 
     const showLinks = navLinks.map(link =>

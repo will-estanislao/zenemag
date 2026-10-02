@@ -26,9 +26,9 @@ export default function Tabs() {
     return (
         <div>
             <ul className={`text-shadow-lg/50 flex ${styles.tabBar} font-bold text-lg`}>
-                <li id="zene" className={`${selected === galleryTabs[0] ? 'bg-[#e14b57]  font-extrabold border-r-5 border-r-[#2fada0]' : 'bg-[#4e758b]'}`} onClick={handleClick}>Zene Magazine</li>
-                <li id="photo" className={selected === galleryTabs[1] ? 'bg-[#3f8ae4] font-extrabold border-r-5 border-r-[#2fada0]' : 'bg-[#4e758b]'} onClick={handleClick}>Photos</li>
-                <li id="videos" className={selected === galleryTabs[2] ? 'bg-[#e8d032] font-extrabold border-r-5 border-r-[#2fada0]' : 'bg-[#4e758b]'} onClick={handleClick}>Videos</li>
+                <li id="zene" className={`${selected === galleryTabs[0] ? 'bg-[#e14b57]/75  font-extrabold border-r-5 border-r-[#2fada0]' : 'bg-[#4e758b]/70'}`} onClick={handleClick}>Zene Magazine</li>
+                <li id="photo" className={selected === galleryTabs[1] ? 'bg-[#3f8ae4]/75 font-extrabold border-r-5 border-r-[#2fada0]' : 'bg-[#4e758b]/70'} onClick={handleClick}>Photos</li>
+                <li id="videos" className={selected === galleryTabs[2] ? 'bg-[#e8d032]/75 font-extrabold border-r-5 border-r-[#2fada0]' : 'bg-[#4e758b]/70'} onClick={handleClick}>Videos</li>
             </ul>
             <div className={`${styles.tabContent}`}>
                 {tabContent}

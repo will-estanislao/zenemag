@@ -15,7 +15,7 @@ export default function Photos() {
     );
 
     return (
-        <div id="pin" className="bg-[#3f8ae4] p-10">
+        <div id="pin" className="bg-[#3f8ae4]/75 p-10">
             <div className='bg-[#FFFF]/75 rounded-t-xl text-black pl-10 pr-10 pt-10 '>
                 <div className="pb-5">
                     <h2 className="text-xl font-bold">Photo Gallery</h2>

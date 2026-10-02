@@ -3,7 +3,7 @@ import ZineCard from "./zineCard";
 export default function Magazine() {
     
     return (
-        <div className='bg-[#e14b57] p-10'>
+        <div className='bg-[#e14b57]/75 p-10'>
             <div className='bg-[#FFFF]/75 rounded-xl text-black font-[arial] p-10'>
                 <div className="pb-5">
                     <h2 className="text-xl font-bold">Zene Magazine Online Archive</h2>

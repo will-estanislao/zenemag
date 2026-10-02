@@ -14,7 +14,7 @@ export default function Archive() {
     return (
         <div>
             <h1 className='text-3xl font-bold mb-15 underline text-shadow-lg/50 tracking-widest text-center text-nowrap'>Archive</h1>
-            <div className='bg-[#e8772f] p-10'>
+            <div className='bg-[#e8772f]/70 p-10'>
                 <div className='bg-[#FFFF]/75 rounded-xl text-black font-[arial] p-10'>
                     <div className="pb-5">
                     <h2 className="text-xl font-bold">Previous Blog Entries</h2>
