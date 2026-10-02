@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import Image from "next/image"
 import '@/app/globals.css'
 import { orbitron, lexend} from '@/app/styles/fonts'
@@ -18,14 +19,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="font-orbitron">
         <div className='min-h-full flex flex-col'>
-        <header className="flex justify-end backdrop-blur-xs">
+          <header className="flex justify-end backdrop-blur-xs ">
+            <Link href="/" className="cursor-pointer">
               <Image
                 src={'/logos/zenelogo.png'}
                 width={200}
-                height={100}
+                height={115}
                 alt={'Zene Logo'}
-                className='w-auto h-auto'
               ></Image> 
+              </Link>
         </header>
         <hr />
         {children}

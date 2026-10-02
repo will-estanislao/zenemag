@@ -6,8 +6,9 @@ export default function About() {
             <h1 className='text-3xl font-bold mb-15 underline text-shadow-lg/50 tracking-widest text-center text-nowrap'>About Zene Magazine</h1>
             <div className={`${styles.main} ${styles.tabContent} p-10 bg-[#a1d32d]`}>
                 <div className='bg-[#FFFF]/75 rounded-xl text-black font-[arial] p-10'>
-                <h2 className='font-extrabold text-2xl mb-5'>Origins of Zene</h2>
-                <p>
+                    <h2 className='font-extrabold text-2xl mb-2'>Origins of Zene</h2>
+                    <hr />
+                <p className='mt-3'>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum recusandae error expedita.
                     Architecto nisi iusto aspernatur eaque. Quibusdam architecto quidem consequatur! Minima, eaque quod!
                     Molestias deserunt assumenda officiis nesciunt similique. Lorem ipsum dolor sit amet consectetur adipisicing
