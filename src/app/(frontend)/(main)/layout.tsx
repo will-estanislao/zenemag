@@ -1,6 +1,6 @@
 import Header from "./header";
 import "@/app/globals.css";
-import { orbitron, lexend} from '@/app/styles/fonts'
+import { orbitron, lexend } from '@/app/styles/fonts'
 
 const fonts = [orbitron, lexend];
 
@@ -25,6 +25,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                         <h3>Zene Magazine &copy; 2026</h3>
                     </footer>
                 </div>
+                
             </body>
         </html>
     );
