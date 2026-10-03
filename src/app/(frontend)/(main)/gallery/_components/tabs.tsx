@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import styles from '../../mainstyles.module.css';
-import Magazine from './magazine';
+import Magazine from './_magazine/magazine';
 import Photos from './photos';
 import Videos from './videos';
 
