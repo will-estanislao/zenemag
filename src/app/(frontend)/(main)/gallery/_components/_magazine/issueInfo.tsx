@@ -1,14 +1,16 @@
+import Link from "next/link";
 import Image from "next/image";
 import galleryStyle from '../../gallery.module.css'
 import { getCoverImgUrl } from '../../_utils/utils';
-import { useState } from "react";
-import Flipbook from "./flipbook";
 
-export default function IssueInfo({ issueDetails, isActive, onShow} ) {
+export default function IssueInfo({ issueDetails } : {issueDetails : any}) {
+
+    let url = issueDetails.url;
 
     return (
         <>
-        <div onClick={onShow} id={issueDetails.id} className={`p-5 cursor-pointer bg-[#FFFF]/75 ${galleryStyle.magazineCard}`}>
+            <Link href={{pathname:`/gallery/archive/${url}`}}>
+        <div id={issueDetails.id} className={`p-5 cursor-pointer bg-[#FFFF]/75 ${galleryStyle.magazineCard}`}>
             <h3 className="font-bold text-lg">{issueDetails.title}</h3>
             <h4 className="italic font-light text-sm">{issueDetails.subtitle}</h4>
             <div className="cursor-pointer h-50 justify-center flex mt-2 mb-4">
@@ -23,12 +25,8 @@ export default function IssueInfo({ issueDetails, isActive, onShow} ) {
             <p className="cursor-default">{issueDetails.description}</p>
             <br />
             <p className="">Read Me!</p>
-            </div>
-            {isActive ? (
-                <div><Flipbook url={issueDetails.url} /></div>
-            ) : (
-                <div></div>
-            )}
+                </div>
+            </Link>
         </>
     );
 }

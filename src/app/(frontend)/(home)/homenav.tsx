@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Homenav() {
     
     const navLinks = [
-        { name: "Home", href: "/home", src: "/navicons/white/sprite-home.png", alt: "Home", bg: "bg-linear-to-r from-[#42caa6] to-[#a1d32d]/60" },
+        { name: "Home", href: "/", src: "/navicons/white/sprite-home.png", alt: "Home", bg: "bg-linear-to-r from-[#42caa6] to-[#a1d32d]/60" },
         { name: "About", href: "/about", src: "/navicons/white/sprite-about.png", alt: "About", bg: "bg-linear-to-r from-[#a1d32d] to-[#e14b57]/60" },
         { name: "Gallery", href: "/gallery", src: "/navicons/white/sprite-gallery.png", alt: "Gallery", bg: "bg-linear-to-r from-[#e14b57] to-[#e8772f]/60"},
         { name: "Blog", href: "/blog/archive", src: "/navicons/white/sprite-blog.png", alt: "Blog", bg: "bg-linear-to-r from-[#e8772f] to-[#e8d032]/60" },

@@ -1,11 +1,11 @@
 "use strict";
 import { init as pdfjsInit, getPdfjs } from "./pdfjs-init";
 
-export function init(pdflink: any, cb: Function) {
+export function init(pdflink: any, cb: any) {
   pdfjsInit(); // Call on worker
   const pdfjs = getPdfjs(); // get pdfjs lib
 
-  const cache: any = []; // your useSet
+  const cache: any = []; // your useSet- seems to store parsed pdfs
 
   // Attempt to get pdf and parse it for info
   pdfjs
@@ -30,8 +30,9 @@ export function init(pdflink: any, cb: Function) {
 
   /**
    * Gets the first page, takes the pdf link, a number, and a function
-   * n: if null or greater than the number of pages, execute funct(in this case warm_cache?)
-   * if the page in cache exist(?) return null, and
+   * n: if 0 or greater than the number of pages, execute funct(in this case warm_cache?)
+   * if the page in cache exist(?) return null, and the pdf obj
+   *
    */
   function get_page_1(pdf: any, n: number, cb: Function) {
     if (!n || n > pdf.numPages) return cb();

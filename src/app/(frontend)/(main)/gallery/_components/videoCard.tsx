@@ -8,10 +8,9 @@ export default function VideoCard() {
                     muted
                     loop
                     controls
-                    width="540"
-                    height={testVideo.at(0)?.height}
                     preload="none"
-                    className='ml-5 mr-10'
+                    width={480}
+                    className='ml-5 mr-10 aspect-video bg-black'
                 >
                     <source src='/movieex.mp4' type="video/mp4" />
                 </video>

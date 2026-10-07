@@ -1,11 +1,7 @@
-import Flipbook from "./flipbook";
 import IssueInfo from "./issueInfo";
 import { testData } from "../../data";
-import { useState } from "react";
 
 export default function Magazine() {
-
-    const [activeIndex, setActiveIndex] = useState(null);
 
     const issueCardList = testData.map(dataObject =>
         <div key={dataObject.id}>
@@ -18,28 +14,21 @@ export default function Magazine() {
                         coverID: dataObject.coverID,
                         description: dataObject.description,
                         url: dataObject.url
-                    }}
-                isActive={activeIndex === dataObject.id}
-                onShow={()=> setActiveIndex(dataObject.id)}
-                
-        />
+                    }}                
+            />
         </div>
     );
     
     return (
-        <>
-        <div className='bg-[#e14b57]/75 p-10'>
-            <div className='bg-[#FFFF]/75 rounded-xl text-black font-[arial] p-10'>
-                <div className="pb-5">
-                    <h2 className="text-xl font-bold">Zene Magazine Online Archive</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quidem quis esse nihil, facere natus.</p>
-                </div>
-                <hr />
-                <div className="pt-5 grid grid-cols-2 gap-8 md:grid-cols-3">
-                    {issueCardList}
+            <div className='bg-[#e14b57]/75 p-10'>
+                <div className='bg-[#FFFF]/75 rounded-xl text-black font-[arial] p-10'>
+                        <div className="pb-5">
+                            <h2 className="text-xl font-bold">Zene Magazine Online Archive</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quidem quis esse nihil, facere natus.</p>
+                        </div>
+                        <hr />
+                    <div className="pt-5 grid grid-cols-2 gap-8 md:grid-cols-3">{issueCardList}</div>
                 </div>
             </div>
-            </div>
-        </>
     );
 }
