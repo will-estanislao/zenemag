@@ -1,13 +1,15 @@
-import { testEntry } from "../../gallery/data";
+import { retrieveAllPosts } from "@/app/(frontend)/api/payloadPosts";
+import Link from "next/link";
 
-export default function Archive() {
 
-    // Load in archive links
-    const loadBlogLinks = testEntry.map(entry =>
+export default async function Archive() {
+    const posts = await retrieveAllPosts();
+
+    const loadBlogLinks = posts.map(entry =>
         <li key={entry.id}>
-        <a href="/blog/archive" className="text-blue-600">
-            {entry.title} - {entry.date}
-            </a>
+        <Link href={{pathname:`/blog/archive/${entry.id}/`}} className="text-blue-600">
+            {entry.title} - {entry.createdAt}
+            </Link>
             </li>
     );
 
