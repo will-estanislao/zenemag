@@ -1,8 +1,7 @@
 'use client'
 
 import { pdfjs } from 'react-pdf';
-import { Suspense, useMemo, useState } from 'react';
-import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
+import { useState } from 'react';
 import { Document, Page } from 'react-pdf';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url,).toString();

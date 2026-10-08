@@ -1,6 +1,17 @@
+import { getPayloadClient } from "@/lib/cms/getPayload";
 import { testEntry } from "../../gallery/data";
+import { BasePayload } from "payload";
 
-export default function Archive() {
+export default async function Archive() {
+
+    /*
+    const payload: BasePayload = await getPayloadClient();
+    const posts = await payload.find({
+        collection: 'posts',
+    });
+
+    console.log(posts);
+    */
 
     // Load in archive links
     const loadBlogLinks = testEntry.map(entry =>
