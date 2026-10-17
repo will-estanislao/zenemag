@@ -1,9 +1,9 @@
-import { retrieveAllPosts } from "@/app/(frontend)/api/payloadPosts";
+import { fetchAllPosts } from "@/lib/payloadPosts";
 import Link from "next/link";
 
 
 export default async function Archive() {
-    const posts = await retrieveAllPosts();
+    const posts = await fetchAllPosts();
 
     const loadBlogLinks = posts.map(entry =>
         <li key={entry.id}>

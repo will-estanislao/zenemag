@@ -3,6 +3,7 @@ import {
   lexicalEditor,
 } from "@payloadcms/richtext-lexical";
 import type { CollectionConfig } from "payload";
+import { afterReadHooks, setAuthor } from "./fieldHooks/hooks";
 
 export const Posts: CollectionConfig = {
   slug: "posts",
@@ -37,6 +38,8 @@ export const Posts: CollectionConfig = {
       type: "relationship",
       relationTo: "users",
       label: "Author",
+      index: true,
+      hasMany: false,
     },
   ],
   versions: {
