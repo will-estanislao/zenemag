@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="font-orbitron">
         <div className='min-h-full flex flex-col'>
-          <header className="flex justify-end backdrop-blur-xs ">
+          <header className="flex justify-end backdrop-blur-xs  bg-black/50">
             <Link href="/" className="cursor-pointer">
               <Image
                 src={'/logos/zenelogo.png'}
@@ -30,9 +30,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               </Link>
         </header>
         <hr />
-        {children}
+        <main className='flex-1 pl-0 pr-0 md:pl-10 md:pr-10 xl:pl-20 xl:pr-20'>
+          {children}
+        </main>
         <hr />
-        <div className="backdrop-blur-xs">
+        <div className="backdrop-blur-xs  bg-black/50">
           <footer className="flex justify-center shrink-0 mt-5 mb-5 text-shadow-lg/50">
             <h3>Zene Magazine &copy; 2026</h3>
           </footer>

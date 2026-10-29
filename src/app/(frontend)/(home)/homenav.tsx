@@ -15,7 +15,7 @@ export default function Homenav() {
     const transitionEffects = "transition-all delay-150 duration-400 ease-in-out";
 
     const showLinks = navLinks.map(link =>
-        <Link id={link.alt} className={`row-span-1 col-span-1 w-75 md:w-full h-17 mb-5 pl-10 md:pl-25 
+        <Link id={link.alt} className={`h-17 mb-7 pl-10 lg:pl-25 
         text-4xl font-bold uppercase tracking-[.35em] content-center text-shadow-black 
         text-shadow-sm shadow-lg/20 ${link.bg} ${transitionEffects} ${hoverEffects}`}
             href={link.href}
