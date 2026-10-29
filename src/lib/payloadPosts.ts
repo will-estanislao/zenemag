@@ -1,9 +1,12 @@
-import { getPayloadClient } from "@/lib/getPayloadClient";
-import { BasePayload } from "payload";
+"use server";
+import { BasePayload, getPayload } from "payload";
+import config from "@payload-config";
 
-const getPayload: BasePayload = await getPayloadClient();
+export const getPayloadClient: () => Promise<BasePayload> = async () =>
+  await getPayload({ config }); // Helper for connecting with payload
 
 export async function fetchAllPosts() {
+  const getPayload: BasePayload = await getPayloadClient();
   const posts = await getPayload.find({
     collection: "posts",
     sort: "-createdAt",
@@ -17,6 +20,7 @@ export async function fetchAllPosts() {
 }
 
 export async function fetchByID(params: string | number) {
+  const getPayload: BasePayload = await getPayloadClient();
   const post = await getPayload.findByID({
     collection: "posts",
     id: params,
@@ -27,6 +31,7 @@ export async function fetchByID(params: string | number) {
 }
 
 export async function fetchFirstPost() {
+  const getPayload: BasePayload = await getPayloadClient();
   const firstPost = await getPayload.find({
     collection: "posts",
     limit: 1,
@@ -42,14 +47,13 @@ export async function fetchFirstPost() {
 }
 
 export async function fetchGalleryImages() {
-  const images = await getPayload.find({
-    collection: "media",
-    where: {
-      "folders.name": {
-        equals: "gallery",
-      },
-    },
-  });
-
-  return images;
+  const getPayload: BasePayload = await getPayloadClient();
+  try {
+    const images = await getPayload.find({
+      collection: "media",
+    });
+    return images;
+  } catch (error) {
+    throw new Error(`Error fetching images`);
+  }
 }

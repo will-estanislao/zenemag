@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from '../../mainstyles.module.css';
 import Magazine from './_magazine/magazine';
 import Photos from './photos';
 import Videos from './videos';
+import ImageCards from './imageCards';
 
-export default function Tabs() {
+export default function Tabs({children}:{children: React.ReactNode}) {
 
     const [tabContent, setTabContent] = useState(<Magazine />);
     const galleryTabs = ['zene', 'photo', 'videos'];
@@ -17,7 +18,7 @@ export default function Tabs() {
         if (e.target.id === "zene") {
             setTabContent(<Magazine />);
         } else if (e.target.id === "photo") {
-            setTabContent(<Photos />);
+            setTabContent(<div>{children}</div>);
         } else if (e.target.id === "videos") {
             setTabContent(<Videos />);
         }

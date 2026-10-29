@@ -1,3 +1,5 @@
+"use server";
+
 import { BasePayload, getPayload } from "payload";
 import config from "@payload-config";
 

@@ -27,6 +27,15 @@ export const Posts: CollectionConfig = {
       required: true,
     },
     {
+      name: "username",
+      type: "relationship",
+      relationTo: "users",
+      label: "Author",
+      index: true,
+      hasMany: false,
+      required: true,
+    },
+    {
       name: "content",
       type: "richText",
       label: "Blog Post Body",
@@ -37,14 +46,6 @@ export const Posts: CollectionConfig = {
         ],
       }),
       required: true,
-    },
-    {
-      name: "username",
-      type: "relationship",
-      relationTo: "users",
-      label: "Author",
-      index: true,
-      hasMany: false,
     },
   ],
   versions: {

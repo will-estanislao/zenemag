@@ -20,12 +20,6 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Posts],
-  folders: {
-    browseByFolder: true,
-    debug: true,
-    slug: "folder",
-    fieldName: "folders",
-  },
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
