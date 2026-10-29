@@ -12,11 +12,11 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 
     return (
         <html lang="en" className={`${fonts[0].variable} ${fonts[1].variable}`}>
-            <body className="font-orbitron flex flex-col">
+            <body className="font-orbitron flex flex-col min-w-full">
                 <div className="backdrop-blur-xs bg-black/50">
                     <Header />
                 </div>
-                <main className='flex-1 mt-15 mb-15 pl-20 pr-20'>
+                <main className='flex-1 mt-15 mb-15 md:pl-10 md:pr-10 lg:pl-20 lg:pr-20 sm:min-w-full'>
                     {children}
                 </main>
                 <hr />

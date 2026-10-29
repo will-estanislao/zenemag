@@ -23,7 +23,7 @@
 .headerFont {
     font-size: 2rem;
     font-weight: bolder;
-    cursor:default;
+    cursor: default;
 }
 
 /* Main Page Content */
@@ -40,10 +40,10 @@
     text-align: center;
     padding: 10px 15px 10px 20px;
     text-wrap: nowrap;
-    cursor:pointer;
+    cursor: pointer;
     letter-spacing: 0.2rem;
     transition: font-weight 0.5s, box-shadow 0.5s, margin-right 1s, padding 0.7s, width 0.5s,
-    margin-top 0.05s, color 1s, font-size 0.5s;
+        margin-top 0.05s, color 1s, font-size 0.5s;
 }
 
 .tabBar li:hover {
@@ -56,16 +56,15 @@
 }
 
 .tabBar li:active {
-    color:white;
+    color: white;
     font-size: large;
-    font-weight:bolder;
+    font-weight: bolder;
     padding: 5px 20px;
     margin-top: 3.5px;
-    width:auto;
+    width: auto;
 }
 
 .tabContent {
 
     box-shadow: 3px 2.5px 2px black;
 }
-
