@@ -1,13 +1,14 @@
-import { testEntry } from "../../gallery/data";
+import { fetchAllPosts } from "@/lib/payloadPosts";
+import Link from "next/link";
 
-export default function Archive() {
+export default async function Archive() {
+    const posts = await fetchAllPosts();
 
-    // Load in archive links
-    const loadBlogLinks = testEntry.map(entry =>
-        <li key={entry.id}>
-        <a href="/blog/archive" className="text-blue-600">
-            {entry.title} - {entry.date}
-            </a>
+    const loadBlogLinks = posts.map(entry =>
+        <li key={entry.id} className="odd:bg-white/50 even:bg-[#e8772f]/50 text-sm md:text-lg lg:text-xl font-semibold pl-5 pt-2 hover:animate-pulse h-12 align-middle">
+        <Link href={{pathname:`/blog/archive/${entry.id}/`}} className="text-blue-600 underline">
+            {entry.title} - {new Date(entry.createdAt).toLocaleDateString()}
+            </Link>
             </li>
     );
 
@@ -20,8 +21,6 @@ export default function Archive() {
                     <h2 className="text-xl font-bold">Previous Blog Entries</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quidem quis esse nihil, facere natus.</p>
                     </div>
-                    <hr />
-                    <div>Search for an entry by date only </div>
                     <hr />
                     <ul className="mt-5">
                         {loadBlogLinks}
