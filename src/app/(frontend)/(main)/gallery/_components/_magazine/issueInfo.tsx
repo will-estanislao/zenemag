@@ -25,7 +25,7 @@ export default function IssueInfo({ issueDetails }: { issueDetails: any }) {
             </div>
             <p className="cursor-default">{issueDetails.description}</p>
             <br />
-                <Link href={`/archive/${issueDetails.url}`} className="bg-[#39cfeb] text-white text-shadow-lg p-2 rounded-2xl ml-2">
+                <Link href={`gallery/archive/${issueDetails.url}`} className="bg-[#39cfeb] text-white text-shadow-lg p-2 rounded-2xl ml-2">
                     Read Me!
                 </Link>
                 {issueDetails.storeUrl != '' &&

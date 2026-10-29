@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.90.2",
@@ -18,7 +18,8 @@
     "payload": "^3.90.2",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "react-pdf": "^11.0.0"
+    "react-pdf": "^11.0.0",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
