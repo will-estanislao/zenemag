@@ -3,7 +3,7 @@ import {
   lexicalEditor,
 } from "@payloadcms/richtext-lexical";
 import type { CollectionConfig } from "payload";
-import { afterReadHooks, setAuthor } from "./fieldHooks/hooks";
+import { editor } from "./access/editor";
 
 export const Posts: CollectionConfig = {
   slug: "posts",
@@ -13,7 +13,12 @@ export const Posts: CollectionConfig = {
     description: "Create or edit a blog post",
     listSearchableFields: ["title"],
   },
-  access: {},
+  access: {
+    read: () => true,
+    update: editor,
+    create: editor,
+    delete: editor,
+  },
   fields: [
     {
       name: "title",

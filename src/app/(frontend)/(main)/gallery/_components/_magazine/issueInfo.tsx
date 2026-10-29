@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import galleryStyle from '../../gallery.module.css'
 import { getCoverImgUrl } from '../../_utils/utils';
-import ViewerButton from "../viewerButton";
 import { useState } from "react";
 
 export default function IssueInfo({ issueDetails }: { issueDetails: any }) {

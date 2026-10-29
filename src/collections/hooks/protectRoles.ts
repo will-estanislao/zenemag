@@ -1,0 +1,17 @@
+import type { FieldHook } from "payload";
+import type { User } from "@/payload-types";
+
+export const protectRoles: FieldHook<{ id: string } & User> = ({
+  req,
+  data,
+}) => {
+  const isAdmin: any = req.user?.role?.includes("admin");
+
+  if (!isAdmin) {
+    return ["user"];
+  }
+
+  const userRoles = new Set(data?.role || []);
+  userRoles.add("user");
+  return [...userRoles.values()];
+};

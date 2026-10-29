@@ -1,18 +1,6 @@
-import { getGalleryImgUrl } from '../_utils/utils';
-import Image from 'next/image';
-import { testGallery } from '../data';
+import ImageCards from './imageCards';
 
 export default function Photos() {
-    const loadImages = testGallery.map(img =>
-            <Image
-                src={getGalleryImgUrl(img.imgID)}
-                width={500}
-                height={img.height}
-                alt={'Image Test'}
-                 key={img.id}
-            />
-
-    );
 
     return (
         <div id="pin" className="bg-[#3f8ae4]/75 p-10 min-w-md">
@@ -26,7 +14,7 @@ export default function Photos() {
             </div>
             <div className='bg-[#FFFF]/75 rounded-b-xl p-10 md:h-175 overflow-y-scroll'>
                 <div className="columns-1 space-y-4 mt-5 lg:columns-2 xl:columns-3 xl:gap-3 bg-[#FFFF]/75 p-5">
-                    {loadImages}
+                    <ImageCards />
                 </div>
             </div>
             <div id="end"></div>

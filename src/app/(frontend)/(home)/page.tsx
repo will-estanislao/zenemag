@@ -10,7 +10,7 @@ export default async function Home() {
   const post = allPosts.map(data =>
     <div key={0} className="flex">
       <Link href={`/blog/archive/${data.id}`} className="font-lexend font-bold text-[#4e758b] hover:text-[#3f8ae4] text-xs md:text-sm lg:text-base">
-        {data.title} {data.createdAt}
+        {data.title} - {new Date(data.createdAt).toLocaleDateString()}
       </Link>
       <p className="ml-2 font-extrabold animate-bounce text-[#e14b57] text-shadow-xs">NEW! </p>
       </div>

@@ -6,8 +6,6 @@ const getPayload: BasePayload = await getPayloadClient();
 export async function fetchAllPosts() {
   const posts = await getPayload.find({
     collection: "posts",
-    limit: 5,
-    page: 1,
     sort: "-createdAt",
     select: {
       title: true,
@@ -41,4 +39,17 @@ export async function fetchFirstPost() {
   });
 
   return firstPost.docs;
+}
+
+export async function fetchGalleryImages() {
+  const images = await getPayload.find({
+    collection: "media",
+    where: {
+      "folders.name": {
+        equals: "gallery",
+      },
+    },
+  });
+
+  return images;
 }
