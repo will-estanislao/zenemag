@@ -9,7 +9,7 @@ import { gsap } from "gsap";
  */
 
 export function getCoverImgUrl(cover: string) {
-  return "/pdf/" + cover + ".png";
+  return "/pdf/covers/" + cover + ".webp";
 }
 
 export function showMagazinePreview() {

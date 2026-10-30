@@ -1,9 +1,10 @@
 import IssueInfo from "./issueInfo";
-import { testData } from "../../_utils/data";
+import { zineData } from "../../_utils/data";
+
 
 export default function Magazine() {
 
-    const issueCardList = testData.map(dataObject =>
+    const issueCardList = zineData.map(dataObject =>
         <div key={dataObject.id}>
             <IssueInfo
                 issueDetails={
@@ -11,10 +12,11 @@ export default function Magazine() {
                         id: dataObject.id,
                         title: dataObject.title,
                         subtitle: dataObject.subtitle,
+                        date: dataObject.date,
                         coverID: dataObject.coverID,
                         description: dataObject.description,
                         url: dataObject.url,
-                        storeUrl: dataObject.storeurl
+                        storeUrl: dataObject.storeUrl
                     }}                
             />
         </div>

@@ -1,122 +1,43 @@
-export const testData = [
+export const zineData = [
   {
     id: 0,
     title: "Zene Magazine Issue #1",
-    subtitle: "Zene's debut issue\!",
-    coverID: "zi3c3",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, rerum adipisci. Velit assumenda, itaque aperiam dolorem vel rerum labore illo. Aliquam atque impedit harum rem neque beatae fugit veniam dolorum repellat, quibusdam rerum error corporis!",
-    released: "true",
+    subtitle: "Zene Magazine's debut issue!",
+    date: "April 2023",
+    coverID: "zi1c1",
+    description: "Zene Magazine first ever release.",
     url: "",
-    storeurl: "",
+    storeUrl: "",
   },
   {
     id: 1,
     title: "Zene Magazine Issue #2",
-    subtitle: "2nd Volume",
-    coverID: "zi3c3",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, rerum adipisci. Velit assumenda, itaque aperiam dolorem vel rerum labore illo. Aliquam atque impedit harum rem neque beatae fugit veniam dolorum repellat, quibusdam rerum error corporis!",
-    released: "true",
+    subtitle: "Zene Magazine's second issue!",
+    date: "September 2024",
+    coverID: "zi2c2",
+    description: "Zene Magazine's second release",
     url: "",
-    storeurl: "",
+    storeUrl: "",
   },
   {
     id: 2,
     title: "Zene Magazine Issue #3",
     subtitle: "The Anti-Nostalgia Issue",
+    date: "September 2025",
     coverID: "zi3c3",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, rerum adipisci. Velit assumenda, itaque aperiam dolorem vel rerum labore illo. Aliquam atque impedit harum rem neque beatae fugit veniam dolorum repellat, quibusdam rerum error corporis!",
-    released: "true",
+    description: "Zene Magazine's third release",
     url: "zene-issue-3",
-    storeurl: "",
+    storeUrl: "",
   },
   {
     id: 3,
     title: "Zene Magazine Issue #4",
-    subtitle: "The Anti-Nostalgia Issue",
-    coverID: "zi3c3",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, rerum adipisci. Velit assumenda, itaque aperiam dolorem vel rerum labore illo. Aliquam atque impedit harum rem neque beatae fugit veniam dolorum repellat, quibusdam rerum error corporis!",
-    released: "false",
+    subtitle: "The Performance Issue",
+    date: "October 2026",
+    coverID: "zi4c4",
+    description: "Zene Magazine's fourth release",
     url: "",
-    storeurl: "toStorePage",
-  },
-];
-
-export const testGallery = [
-  {
-    id: 0,
-    imgID: "img1",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 1,
-    imgID: "img3",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 2,
-    imgID: "img2",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 3,
-    imgID: "img4",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 4,
-    imgID: "img5",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 5,
-    imgID: "img6",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 6,
-    imgID: "img2",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 7,
-    imgID: "img1",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 8,
-    imgID: "img6",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 9,
-    imgID: "img2",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 10,
-    imgID: "img4",
-    width: 500,
-    height: 200,
-  },
-  {
-    id: 11,
-    imgID: "img5",
-    width: 500,
-    height: 200,
+    storeUrl: "",
   },
 ];
 

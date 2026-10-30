@@ -10,11 +10,11 @@ export default async function Page({
     
   const { zineissues } = await params
   //const { slug } = use(params);
-  console.log("Slug: " + { zineissues });
+  console.log("Slug: " + { zineissues }.zineissues);
   // If the slug given is not existing, in DB, show message of this issue not found, return to the gallery
     return (
       <div>
-          <PDFViewer />
+        <PDFViewer issue={ {zineissues}.zineissues} />
         </div>
     );
 }
