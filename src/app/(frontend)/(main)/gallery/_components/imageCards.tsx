@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { fetchGalleryImages } from '@/lib/payloadPosts';
-import { testGallery } from '../data';
+import { testGallery } from '../_utils/data';
 import { getGalleryImgUrl } from '../_utils/utils';
 
 export default async function ImageCards() {

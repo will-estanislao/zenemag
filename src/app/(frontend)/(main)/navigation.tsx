@@ -21,7 +21,7 @@ export default function Navigation() {
     const pathname = usePathname();
 
     return (
-        <nav className='flex justify-center items-center'>
+        <nav className='flex justify-center items-center flex-wrap'>
             {navLinks.map((link) => {
                 const isActive = pathname === link.href ||
                     (pathname.startsWith(link.href) && link.href !== "/");

@@ -5,7 +5,8 @@ import { Suspense, useMemo, useState } from 'react';
 import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 import { Document, Page } from 'react-pdf';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url,).toString();
+//pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url,).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@6.3.289/build/pdf.worker.min.mjs`;
 
  const options = {
     cMapUrl: "cmaps/",
@@ -13,7 +14,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.m
     standardFontDataUrl: "standard_fonts/",
   };
 
-export default function PDFViewer(props:any) {
+export default function PDFViewer() {
 
     const samplePDF = '/issue3.pdf';
 

@@ -1,4 +1,4 @@
-import { testVideo } from '../data';
+import { testVideo } from '../_utils/data';
 
 export default function VideoCard() {
     return (

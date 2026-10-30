@@ -7,7 +7,7 @@ export default function IssueInfo({ issueDetails }: { issueDetails: any }) {
 
     return (
         <>
-        <div id={issueDetails.id} className={`p-5 bg-[#FFFF]/75 ${galleryStyle.magazineCard} min-w-xs`}>
+        <div id={issueDetails.id} className={`p-5 bg-[#FFFF]/75 ${galleryStyle.magazineCard} min-w-xs h-full`}>
             <h3 className="font-bold text-lg">{issueDetails.title}</h3>
             <h4 className="italic font-light text-sm">{issueDetails.subtitle}</h4>
             <div className="cursor-pointer h-50 justify-center flex mt-2 mb-4">

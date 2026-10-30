@@ -1,5 +1,5 @@
 import IssueInfo from "./issueInfo";
-import { testData } from "../../data";
+import { testData } from "../../_utils/data";
 
 export default function Magazine() {
 
@@ -25,7 +25,7 @@ export default function Magazine() {
                 <div className='bg-[#FFFF]/75 rounded-xl text-black font-[arial] p-10'>
                         <div className="pb-5">
                             <h2 className="text-xl font-bold">Zene Magazine Online Archive</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quidem quis esse nihil, facere natus.</p>
+                            <p>Check out previously released Zene Magazine issues!</p>
                         </div>
                         <hr />
                     <div className="pt-5 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">{issueCardList}</div>
