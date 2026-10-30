@@ -29,7 +29,7 @@ export default async function Home() {
             <hr />
             <div className="mt-5">
               <p className="font-lexend mb-5">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, totam repellendus. Nihil porro velit quasi?
+              ZENE MAGAZINE ISSUE 004, AVAILABLE NOW! LAUNCH PARTY AT BOND ST. EVENTS CENTRE ON OCTOBER 29, 6:30 - 9:30
               </p>
               {post}
             </div>

@@ -7,7 +7,7 @@ export const testData = [
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, rerum adipisci. Velit assumenda, itaque aperiam dolorem vel rerum labore illo. Aliquam atque impedit harum rem neque beatae fugit veniam dolorum repellat, quibusdam rerum error corporis!",
     released: "true",
-    url: "zene-issue-1",
+    url: "",
     storeurl: "",
   },
   {
@@ -18,7 +18,7 @@ export const testData = [
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, rerum adipisci. Velit assumenda, itaque aperiam dolorem vel rerum labore illo. Aliquam atque impedit harum rem neque beatae fugit veniam dolorum repellat, quibusdam rerum error corporis!",
     released: "true",
-    url: "zene-issue-2",
+    url: "",
     storeurl: "",
   },
   {
@@ -40,7 +40,7 @@ export const testData = [
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, rerum adipisci. Velit assumenda, itaque aperiam dolorem vel rerum labore illo. Aliquam atque impedit harum rem neque beatae fugit veniam dolorum repellat, quibusdam rerum error corporis!",
     released: "false",
-    url: "zene-issue-4",
+    url: "",
     storeurl: "toStorePage",
   },
 ];

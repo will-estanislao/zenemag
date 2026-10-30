@@ -1,13 +1,9 @@
-'use client'
 import Link from "next/link";
 import Image from "next/image";
 import galleryStyle from '../../gallery.module.css'
 import { getCoverImgUrl } from '../../_utils/utils';
-import { useState } from "react";
 
 export default function IssueInfo({ issueDetails }: { issueDetails: any }) {
-    
-    const [isDisable, setIsDisable] = useState(true);
 
     return (
         <>
@@ -24,10 +20,12 @@ export default function IssueInfo({ issueDetails }: { issueDetails: any }) {
                 />
             </div>
             <p className="cursor-default">{issueDetails.description}</p>
-            <br />
-                <Link href={`gallery/archive/${issueDetails.url}`} className="bg-[#39cfeb] text-white text-shadow-lg p-2 rounded-2xl ml-2">
+                <br />
+                {issueDetails.url != '' &&
+                    <Link href={`gallery/archive/${issueDetails.url}`} className="bg-[#39cfeb] text-white text-shadow-lg p-2 rounded-2xl ml-2">
                     Read Me!
-                </Link>
+                    </Link>
+                }
                 {issueDetails.storeUrl != '' &&
                     <Link href={`#`} className={`cursor-pointer bg-[#a1d32d] text-white text-shadow-lg p-2 rounded-2xl ml-2`}>
                         Buy A Copy

@@ -30,7 +30,6 @@ export default async function ImageCards() {
     */
   
     return (
-      <><p>Oh boy wtf</p>
-        { loadImages}</>
+      <>{loadImages}</>
     );
 }

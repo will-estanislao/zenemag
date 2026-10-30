@@ -9,12 +9,7 @@ export default function About() {
                     <h2 className='font-extrabold text-2xl mb-2'>Origins of Zene</h2>
                     <hr />
                 <p className='mt-3'>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum recusandae error expedita.
-                    Architecto nisi iusto aspernatur eaque. Quibusdam architecto quidem consequatur! Minima, eaque quod!
-                    Molestias deserunt assumenda officiis nesciunt similique. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Sunt dolore quae dicta nisi laborum culpa, incidunt id numquam aspernatur odit, amet delectus rerum
-                    non sed! Nostrum esse autem tempora natus ratione quas aliquam accusamus assumenda optio at magnam odio dolorem,
-                    aliquid molestiae, commodi voluptatibus repellendus minus. Perferendis maxime perspiciatis dolore.
+                    Zene Magazine is an independently produced publication that highlights the work of contemporary artists, creatives, and businesses. Produced in Durham Region, Ontario, by a small team of volunteers, the magazine places a strong emphasis on Canadian artists while also featuring voices and work from the international arts community. Through interviews, features, and visual showcases, Zene aims to share compelling creative work and support a growing network of artists. We prioritize accessibility in each issue, and do not charge submission fees to artists sending in their work for consideration. 
                     </p>
                 </div>
             </div>
