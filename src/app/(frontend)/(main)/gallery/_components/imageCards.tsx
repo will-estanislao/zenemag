@@ -10,7 +10,7 @@ export default async function ImageCards() {
   
   const image = await fetchGalleryImages();
   const loadImages = image.map(img =>
-    <div key={img.id}>
+    <div key={img.id} className='place-items-center '>
     <Image
         src={`${(img as Media)?.url}`}
       width={500}

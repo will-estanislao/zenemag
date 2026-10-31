@@ -1,10 +1,10 @@
 'use client'
 
 import { pdfjs } from 'react-pdf';
-import React, { Suspense, useMemo, useState } from 'react';
-import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
+import React, { Suspense, useCallback, useMemo, useState } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 import { Document, Page } from 'react-pdf';
-import { useParams } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 
 //pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url,).toString();
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@6.3.289/build/pdf.worker.min.mjs`;
@@ -15,19 +15,22 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@6.3.289/build/pdf.
     standardFontDataUrl: "standard_fonts/",
   };
 
+type PDFFile = string | File | null;
+
 export default function PDFViewer({ issue }: { issue: string }) {
     
-    interface IProps {
-        children: React.ReactNode;
-    }
-    const samplePDF = '/pdf/' + {issue}.issue + '.pdf';
-
+    const pdfFile = '/pdf/' + { issue }.issue + '.pdf';
+    const [file, setFile] = useState<PDFFile>(pdfFile);
     const [numPages, setNumPages] = useState<number>(0);
     const [pageNumber, setPageNumber] = useState<number>(1);
 
     function onDocumentLoadSuccess({ numPages }: {numPages:number}) {
         setNumPages(numPages);
     }
+
+    const onDocumentLoadError = useCallback(() => {
+    console.error('Unable to load file');
+    }, []);
 
     function changePage(offset : number) {
         setPageNumber(prevPageNumber => prevPageNumber + offset);
@@ -54,9 +57,11 @@ export default function PDFViewer({ issue }: { issue: string }) {
                 <button className='p-2 m-2 font-extrabold bg-[#2fada0]/75 rounded-2xl w-25 md:w-50 text-shadow-lg/50' type="button" disabled={pageNumber >= numPages} onClick={nextPage}>Next</button>
             </div>
             <div className='flex justify-center p-2 mx-auto'>
-                <Document file={samplePDF} onLoadSuccess={onDocumentLoadSuccess} options={options} suspense={false} error="Could not load PDF">
+                <ErrorBoundary fallback={<p role="alert">Failed to load PDF.</p>} resetKeys={[file]}>
+                <Document file={file} onLoadSuccess={onDocumentLoadSuccess} onLoadError={onDocumentLoadError} options={options} suspense={false}>
                     <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
-                </Document>
+                    </Document>
+                </ErrorBoundary>
             </div>
         </>
     )

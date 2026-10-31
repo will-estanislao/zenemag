@@ -1,5 +1,5 @@
 import IssueInfo from "./issueInfo";
-import { zineData } from "../../_utils/data";
+import { zineData } from "../../../../../../lib/data/data";
 
 
 export default function Magazine() {

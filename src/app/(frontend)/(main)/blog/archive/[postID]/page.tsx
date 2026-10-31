@@ -2,6 +2,7 @@ import { fetchByID } from "@/lib/payloadPosts";
 import RichTextViewer from "@/app/components/richTextViewer";
 import { User } from "@/payload-types";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -11,12 +12,12 @@ export default async function Page({
   const { postID } = await params;
   const id = { postID }.postID;
   const retrievedPost = await fetchByID(id);
+  if (!retrievedPost) {
+    notFound();
+  }
+
   const user = retrievedPost.username as User;
   const username = user.username;
-
-  //console.log({ postID });
-  //console.log("Slug: " + { postID });
-  //console.log(retrievedPost.username);
 
     return (
       <div className='bg-[#e8772f]/70 p-10'>

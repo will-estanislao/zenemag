@@ -21,15 +21,15 @@ export default function IssueInfo({ issueDetails }: { issueDetails: any }) {
             </div>
             <p className="cursor-default">{issueDetails.description}</p>
                 <br />
-                {issueDetails.url != '' &&
+                {issueDetails.url ?
                     <Link href={`gallery/archive/${issueDetails.url}`} className="bg-[#39cfeb] text-white text-shadow-lg p-2 rounded-2xl ml-2">
                     Read Me!
-                    </Link>
+                    </Link> : <p></p>
                 }
-                {issueDetails.storeUrl != '' &&
+                {issueDetails.storeUrl ?
                     <Link href={`#`} className={`cursor-pointer bg-[#a1d32d] text-white text-shadow-lg p-2 rounded-2xl ml-2`}>
                         Buy A Copy
-                    </Link>
+                    </Link> : <p></p>
                 }
             </div>
         </>

@@ -1,5 +1,5 @@
 import { fetchVideos } from '@/lib/payloadPosts';
-import { testVideo } from '../_utils/data';
+import { testVideo } from '../../../../../lib/data/data';
 
 export default async function VideoCard() {
 
@@ -12,7 +12,7 @@ export default async function VideoCard() {
                     controls
                     preload="none"
                     width={480}
-                    className='aspect-video bg-black min-w-xs'
+                    className='aspect-video bg-black min-w-xs justify-center'
                 >
                     <source src={video?.url!} type={video?.mimeType!} />
                 </video>
