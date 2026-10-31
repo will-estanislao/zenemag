@@ -1,5 +1,6 @@
 import type { CollectionConfig } from "payload";
 import { editor } from "./access/editor";
+import { admin } from "./access/admin";
 
 export const Zines: CollectionConfig = {
   slug: "zines",
@@ -10,10 +11,10 @@ export const Zines: CollectionConfig = {
     hidden: true,
   },
   access: {
-    read: () => true,
-    update: editor,
-    create: editor,
-    delete: editor,
+    read: admin,
+    update: admin,
+    create: admin,
+    delete: admin,
   },
   fields: [
     {

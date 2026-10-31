@@ -5,7 +5,7 @@ import styles from '../../mainstyles.module.css';
 import Magazine from './_magazine/magazine';
 import Videos from './videos';
 
-export default function Tabs({children}:{children: React.ReactNode}) {
+export default function Tabs({photos, videos}:{photos: React.ReactNode, videos: React.ReactNode}) {
 
     const [tabContent, setTabContent] = useState(<Magazine />);
     const galleryTabs = ['zene', 'photo', 'videos'];
@@ -16,9 +16,9 @@ export default function Tabs({children}:{children: React.ReactNode}) {
         if (e.target.id === "zene") {
             setTabContent(<Magazine />);
         } else if (e.target.id === "photo") {
-            setTabContent(<div>{children}</div>);
+            setTabContent(<div>{photos}</div>);
         } else if (e.target.id === "videos") {
-            setTabContent(<Videos />);
+            setTabContent(<div>{videos}</div>);
         }
     }
 

@@ -1,19 +1,23 @@
 import Image from 'next/image'
 import { fetchGalleryImages } from '@/lib/payloadPosts';
-import { testGallery } from '../_utils/data';
-import { getGalleryImgUrl } from '../_utils/utils';
+import { Media } from '@/payload-types';
 
 export default async function ImageCards() {
+
+  //const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
+  //const fileURL = process.env.NEXT_PUBLIC_SITE_URL + '/';
+  //console.log(fileURL);
   
   const image = await fetchGalleryImages();
-  const loadImages = image.docs.map(img =>
+  const loadImages = image.map(img =>
+    <div key={img.id}>
     <Image
-      src={(img)?.url!}
+        src={`${(img as Media)?.url}`}
       width={500}
       height={img.height!}
       alt={img.alt}
-      key={img.id}
-    />
+      />
+      </div>
     );
   
   /*

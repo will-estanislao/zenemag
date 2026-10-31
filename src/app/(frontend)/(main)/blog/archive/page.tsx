@@ -19,7 +19,7 @@ export default async function Archive() {
                 <div className='bg-[#FFFF]/75 rounded-xl text-black font-[arial] p-10'>
                     <div className="pb-5">
                     <h2 className="text-xl font-bold">Previous Blog Entries</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quidem quis esse nihil, facere natus.</p>
+                    <p>Read previous blog entries</p>
                     </div>
                     <hr />
                     <ul className="mt-5">

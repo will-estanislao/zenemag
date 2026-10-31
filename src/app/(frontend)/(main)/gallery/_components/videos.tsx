@@ -6,7 +6,7 @@ export default function Videos() {
             <div className='bg-[#FFFF]/75 rounded-xl text-black p-10'>
                 <div className="pb-5">
                     <h2 className="text-xl font-bold">See Zene In Action!</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quidem quis esse nihil, facere natus.</p>
+                    <p></p>
                 </div>
                 <hr />
                 <VideoCard  />

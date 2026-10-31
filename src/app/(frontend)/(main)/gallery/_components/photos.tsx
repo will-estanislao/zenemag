@@ -7,7 +7,7 @@ export default function Photos() {
             <div className='bg-[#FFFF]/75 rounded-t-xl text-black pl-10 pr-10 pt-10 '>
                 <div className="pb-5">
                     <h2 className="text-xl font-bold">Photo Gallery</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quidem quis esse nihil, facere natus.</p>
+                    <p></p>
                 </div>
             
                 <hr />

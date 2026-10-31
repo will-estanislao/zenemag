@@ -51,8 +51,40 @@ export async function fetchGalleryImages() {
   try {
     const images = await getPayload.find({
       collection: "media",
+      select: {
+        url: true,
+        alt: true,
+        height: true,
+        id: true,
+        filename: true,
+      },
+      where: {
+        "folder.name": { equals: "Gallery" },
+      },
     });
-    return images;
+    return images.docs;
+  } catch (error) {
+    throw new Error(`Error fetching images`);
+  }
+}
+
+export async function fetchVideos() {
+  const getPayload: BasePayload = await getPayloadClient();
+  try {
+    const videos = await getPayload.find({
+      collection: "media",
+      select: {
+        url: true,
+        alt: true,
+        id: true,
+        filename: true,
+        mimeType: true,
+      },
+      where: {
+        "folder.name": { equals: "Videos" },
+      },
+    });
+    return videos.docs;
   } catch (error) {
     throw new Error(`Error fetching images`);
   }
