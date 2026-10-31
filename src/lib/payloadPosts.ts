@@ -21,13 +21,18 @@ export async function fetchAllPosts() {
 
 export async function fetchByID(params: string | number) {
   const getPayload: BasePayload = await getPayloadClient();
-  const post = await getPayload.findByID({
-    collection: "posts",
-    id: params,
-    depth: 2,
-  });
+  try {
+    const post = await getPayload.findByID({
+      collection: "posts",
+      id: params,
+      depth: 2,
+    });
 
-  return post;
+    return post;
+  } catch {
+    console.log("Unable to find post");
+    return null;
+  }
 }
 
 export async function fetchFirstPost() {
@@ -42,7 +47,6 @@ export async function fetchFirstPost() {
     },
     sort: "-createdAt",
   });
-
   return firstPost.docs;
 }
 

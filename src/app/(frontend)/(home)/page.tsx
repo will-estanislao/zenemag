@@ -31,7 +31,7 @@ export default async function Home() {
               <p className="font-lexend mb-5">
               ZENE MAGAZINE ISSUE 004, AVAILABLE NOW! LAUNCH PARTY AT BOND ST. EVENTS CENTRE ON OCTOBER 29, 6:30 - 9:30
               </p>
-              {post}
+              {post ? post : <p></p>}
             </div>
           </div>
           </div>
