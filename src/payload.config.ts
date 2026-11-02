@@ -39,7 +39,6 @@ export default buildConfig({
   }),
   sharp,
   plugins: [
-    /*
     s3Storage({
       enabled: true,
       collections: {
@@ -56,6 +55,5 @@ export default buildConfig({
         endpoint: process.env.S3_ENDPOINT,
       },
     }),
-    */
   ],
 });
