@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import '@/app/globals.css'
 import { orbitron, lexend} from '@/app/styles/fonts'
+import Head from "next/head"
 
 const fonts = [orbitron, lexend];
 
@@ -17,6 +18,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${fonts[0].variable} ${fonts[1].variable}`}
     >
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <body className="font-orbitron">
         <div className='min-h-full flex flex-col'>
           <header className="flex justify-end backdrop-blur-xs  bg-black/50">
