@@ -1,6 +1,7 @@
 import Header from "./header";
 import "@/app/globals.css";
 import { orbitron, lexend } from '@/app/styles/fonts'
+import Head from "next/head";
 
 const fonts = [orbitron, lexend];
 
@@ -12,6 +13,9 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 
     return (
         <html lang="en" className={`${fonts[0].variable} ${fonts[1].variable}`}>
+            <Head>
+                <link rel="icon" href="/favicon.ico" sizes="any" />
+            </Head>
             <body className="font-orbitron flex flex-col min-w-full">
                 <div className="backdrop-blur-xs bg-black/50">
                     <Header />
