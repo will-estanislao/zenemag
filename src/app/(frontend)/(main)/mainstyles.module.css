@@ -52,7 +52,6 @@
     box-shadow: 5px 0px #2fada0;
     font-weight: bold;
     padding: 8.5px 15px 10px 20px;
-    width: auto;
 }
 
 .tabBar li:active {
@@ -61,7 +60,6 @@
     font-weight: bolder;
     padding: 5px 20px;
     margin-top: 3.5px;
-    width: auto;
 }
 
 .tabContent {

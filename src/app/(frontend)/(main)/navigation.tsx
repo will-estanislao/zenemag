@@ -34,7 +34,7 @@ export default function Navigation() {
                             width={32}
                             height={32}
                                 alt={link.alt}
-                                className='mr-2 w-auto h-auto'
+                                className='mr-2'
                         ></Image>
                         {link.name.toLowerCase()}
                         </Link>
