@@ -63,7 +63,7 @@ export async function fetchGalleryImages() {
         filename: true,
       },
       where: {
-        "folder.name": { equals: "Gallery" },
+        tag: { equals: "gallery" },
       },
     });
     return images.docs;
@@ -85,7 +85,7 @@ export async function fetchVideos() {
         mimeType: true,
       },
       where: {
-        "folder.name": { equals: "Videos" },
+        tag: { equals: "videos" },
       },
     });
     return videos.docs;

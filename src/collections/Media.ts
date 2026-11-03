@@ -17,6 +17,25 @@ export const Media: CollectionConfig = {
       name: "description",
       type: "textarea",
     },
+    {
+      name: "tag",
+      required: true,
+      type: "select",
+      defaultValue: "gallery",
+      options: [
+        {
+          label: "Gallery",
+          value: "gallery",
+        },
+        {
+          label: "Video",
+          value: "video",
+        },
+      ],
+      //hooks: {
+      //  beforeChange: [protectRoles],
+      //},
+    },
   ],
   upload: {
     disableLocalStorage: true,
