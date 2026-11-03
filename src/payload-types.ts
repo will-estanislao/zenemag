@@ -161,6 +161,7 @@ export interface Media {
   id: number;
   alt: string;
   description?: string | null;
+  tag: 'gallery' | 'video';
   _objectKey?: string | null;
   folder?: (number | null) | FolderInterface;
   updatedAt: string;
@@ -345,6 +346,7 @@ export interface UsersSelect<T extends boolean = true> {
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
   description?: T;
+  tag?: T;
   _objectKey?: T;
   folder?: T;
   updatedAt?: T;
