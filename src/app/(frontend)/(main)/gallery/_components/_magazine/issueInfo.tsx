@@ -27,7 +27,7 @@ export default function IssueInfo({ issueDetails }: { issueDetails: any }) {
                     </Link> : <p></p>
                 }
                 {issueDetails.storeUrl ?
-                    <Link href={`#`} className={`cursor-pointer bg-[#a1d32d] text-white text-shadow-lg p-2 rounded-2xl ml-2`}>
+                    <Link href={`${issueDetails.storeUrl}`} className={`cursor-pointer bg-[#a1d32d] text-white text-shadow-lg p-2 rounded-2xl ml-2`}>
                         Buy A Copy
                     </Link> : <p></p>
                 }
