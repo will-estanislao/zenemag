@@ -52,24 +52,20 @@ export async function fetchFirstPost() {
 
 export async function fetchGalleryImages() {
   const getPayload: BasePayload = await getPayloadClient();
-  try {
-    const images = await getPayload.find({
-      collection: "media",
-      select: {
-        url: true,
-        alt: true,
-        height: true,
-        id: true,
-        filename: true,
-      },
-      where: {
-        tag: { equals: "gallery" },
-      },
-    });
-    return images.docs;
-  } catch (error) {
-    throw new Error(`Error fetching images`);
-  }
+  const images = await getPayload.find({
+    collection: "media",
+    select: {
+      url: true,
+      alt: true,
+      height: true,
+      id: true,
+      filename: true,
+    },
+    where: {
+      tag: { equals: "gallery" },
+    },
+  });
+  return images.docs;
 }
 
 export async function fetchVideos() {
