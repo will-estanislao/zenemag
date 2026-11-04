@@ -1,5 +1,4 @@
 import { fetchVideos } from '@/lib/payloadPosts';
-import { testVideo } from '../../../../../lib/data/data';
 
 export default async function VideoCard() {
 

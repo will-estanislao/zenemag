@@ -52,41 +52,44 @@ export async function fetchFirstPost() {
 
 export async function fetchGalleryImages() {
   const getPayload: BasePayload = await getPayloadClient();
-  const images = await getPayload.find({
-    collection: "media",
-    select: {
-      url: true,
-      alt: true,
-      height: true,
-      id: true,
-      filename: true,
-    },
-    where: {
-      tag: { equals: "gallery" },
-    },
-  });
-  return images.docs;
+  try {
+    const images = await getPayload.find({
+      collection: "media",
+      select: {
+        url: true,
+        alt: true,
+        height: true,
+        id: true,
+        filename: true,
+      },
+      where: {
+        tag: { equals: "gallery" },
+      },
+    });
+    return images.docs;
+  } catch (error) {
+    throw new Error(`Error fetching images`);
+  }
 }
 
 export async function fetchVideos() {
   const getPayload: BasePayload = await getPayloadClient();
-  const videos = await getPayload.find({
-    collection: "media",
-    select: {
-      url: true,
-      alt: true,
-      id: true,
-      filename: true,
-      mimeType: true,
-    },
-    where: {
-      tag: { equals: "videos" },
-    },
-  });
-
-  if (!videos) {
-    console.log("Error loading videos");
-  } else {
+  try {
+    const videos = await getPayload.find({
+      collection: "media",
+      select: {
+        url: true,
+        alt: true,
+        id: true,
+        filename: true,
+        mimeType: true,
+      },
+      where: {
+        tag: { equals: "video" },
+      },
+    });
     return videos.docs;
+  } catch (error) {
+    throw new Error(`Error fetching videos`);
   }
 }
