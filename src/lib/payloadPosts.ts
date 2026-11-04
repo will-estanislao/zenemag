@@ -70,22 +70,23 @@ export async function fetchGalleryImages() {
 
 export async function fetchVideos() {
   const getPayload: BasePayload = await getPayloadClient();
-  try {
-    const videos = await getPayload.find({
-      collection: "media",
-      select: {
-        url: true,
-        alt: true,
-        id: true,
-        filename: true,
-        mimeType: true,
-      },
-      where: {
-        tag: { equals: "videos" },
-      },
-    });
+  const videos = await getPayload.find({
+    collection: "media",
+    select: {
+      url: true,
+      alt: true,
+      id: true,
+      filename: true,
+      mimeType: true,
+    },
+    where: {
+      tag: { equals: "videos" },
+    },
+  });
+
+  if (!videos) {
+    console.log("Error loading videos");
+  } else {
     return videos.docs;
-  } catch (error) {
-    throw new Error(`Error fetching images`);
   }
 }
