@@ -34,6 +34,10 @@ export const Media: CollectionConfig = {
           label: "Video",
           value: "video",
         },
+        {
+          label: "Blog",
+          value: "blog",
+        },
       ],
       //hooks: {
       //  beforeChange: [protectRoles],
