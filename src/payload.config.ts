@@ -21,12 +21,14 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
+  /*
   folders: {
     debug: true,
     fieldName: "folder",
     slug: "folders",
     browseByFolder: true,
   },
+  */
   collections: [Users, Media, Posts],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
@@ -42,6 +44,7 @@ export default buildConfig({
   plugins: [
     s3Storage({
       enabled: true,
+      clientUploads: true,
       collections: {
         media: true,
       },

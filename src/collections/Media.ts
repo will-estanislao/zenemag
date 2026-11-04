@@ -4,7 +4,6 @@ import { editor } from "./access/editor";
 export const Media: CollectionConfig = {
   slug: "media",
   trash: true,
-  folders: true,
   access: {
     read: () => true,
     update: editor,
