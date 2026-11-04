@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   images: {
     remotePatterns: [
-      new URL("https://ejrhibnoyrzaltq7.public.blob.vercel-storage.com"),
-      //new URL("https://kwsmytvlexajttczjril.storage.supabase.co/storage/v1/s3"),
+      //new URL("https://ejrhibnoyrzaltq7.public.blob.vercel-storage.com"),
+      new URL("https://kwsmytvlexajttczjril.storage.supabase.co/storage/v1/s3"),
     ],
   },
 };
