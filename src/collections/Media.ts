@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { editor } from "./access/editor";
 
 export const Media: CollectionConfig = {
   slug: "media",
@@ -6,6 +7,9 @@ export const Media: CollectionConfig = {
   folders: true,
   access: {
     read: () => true,
+    update: editor,
+    create: editor,
+    delete: editor,
   },
   fields: [
     {
