@@ -3,6 +3,8 @@ import Photos from "./_components/photos";
 import Tabs from "./_components/tabs";
 import Videos from "./_components/videos";
 
+export const dynamic = 'force-dynamic'
+
 export default function Gallery() {
 
     return (
