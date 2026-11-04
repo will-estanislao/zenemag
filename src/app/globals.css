@@ -10,16 +10,17 @@
     }
 }
 
-html,
-body {
-    height: 100%;
-    color: white;
-}
-
-body {
+html {
     background-image: url('/backgrounds/bg1-big.png');
     background-size: auto;
     background-position: center;
+    height: 100%;
+}
+
+
+body {
+    height: 100%;
+    color: white;
     font-size: medium;
 }
 
