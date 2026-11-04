@@ -3,8 +3,8 @@ import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import path from "path";
 import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
-//import { s3Storage } from "@payloadcms/storage-s3";
-import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
+import { s3Storage } from "@payloadcms/storage-s3";
+//import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import sharp from "sharp";
 
 import { Users } from "./collections/Users";
@@ -40,7 +40,6 @@ export default buildConfig({
   }),
   sharp,
   plugins: [
-    /*
     s3Storage({
       enabled: true,
       collections: {
@@ -57,7 +56,7 @@ export default buildConfig({
         endpoint: process.env.S3_ENDPOINT,
       },
     }),
-    */
+    /*
     vercelBlobStorage({
       enabled: true,
       collections: {
@@ -65,5 +64,6 @@ export default buildConfig({
       },
       token: process.env.BLOB_READ_WRITE_TOKEN,
     }),
+    */
   ],
 });
