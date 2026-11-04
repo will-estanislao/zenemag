@@ -65,7 +65,6 @@ export async function fetchGalleryImages() {
       where: {
         tag: { equals: "gallery" },
       },
-      sort: "-createdAt",
     });
     return images.docs;
   } catch (error) {

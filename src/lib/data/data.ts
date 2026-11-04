@@ -37,7 +37,8 @@ export const zineData = [
     coverID: "zi4c4",
     description: "Zene Magazine's fourth release",
     url: "",
-    storeUrl: "",
+    storeUrl:
+      "https://www.etsy.com/ca/listing/4603830476/zene-magazine-issue-004-the-performance?ref=shop_home_active_1&crt=1&logging_key=625bae48b234cad8daffb33edaec7fe0e7fd5a55%3A4603830476",
   },
 ];
 
